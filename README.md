@@ -3,7 +3,8 @@
 Public build progress for **The Long Dark**, a roguelike bullet-heaven horror shmup
 made in Godot 4.7 and headed for Steam.
 
-**Site:** https://remwayai.github.io/the-long-dark-progress/
+**Site:** https://remwayai.github.io/the-long-dark-progress/  
+**Skills catalog:** https://remwayai.github.io/the-long-dark-progress/skills.html
 
 This repo holds *only* the site. The game source, design documents and internal
 audit notes stay in the private repo.
@@ -59,3 +60,5 @@ git commit -am 'data: refresh board' && git push
 | `assets/app.js` | renderer — no dependencies, no build step |
 | `tools/sync.mjs` | board reader / JSON generator |
 | `data/board.json` | generated, committed |
+| `skills.html` | public catalog of agent skills (titles + one-liners only) |
+| `data/skills.json` | skill catalog data |
