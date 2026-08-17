@@ -1,0 +1,64 @@
+name: Sync board and publish
+
+on:
+  # A ticket closing in the private repo cannot notify this repo on its own,
+  # so the board is re-read on a schedule and on demand.
+  schedule:
+    - cron: '7,37 * * * *'
+  workflow_dispatch:
+  repository_dispatch:
+    types: [board-changed]
+  push:
+    branches: [main]
+    paths-ignore: ['data/board.json']
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Read the ticket board
+        if: env.BOARD_TOKEN != ''
+        env:
+          BOARD_TOKEN: ${{ secrets.BOARD_TOKEN }}
+        run: node tools/sync.mjs
+
+      - name: Commit refreshed data
+        if: env.BOARD_TOKEN != ''
+        env:
+          BOARD_TOKEN: ${{ secrets.BOARD_TOKEN }}
+        run: |
+          git config user.name  'long-dark-bot'
+          git config user.email 'actions@github.com'
+          git add data/board.json
+          git diff --staged --quiet || git commit -m 'data: refresh board'
+          git push
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

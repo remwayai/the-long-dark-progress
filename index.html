@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Long Dark — build progress</title>
+<meta name="description" content="Public build progress for The Long Dark, a roguelike bullet-heaven horror shmup made in Godot.">
+<meta property="og:title" content="The Long Dark — build progress">
+<meta property="og:description" content="Live ticket board, burn-up and devlog for a Godot roguelike bullet-heaven horror shmup.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#board">Skip to the ticket list</a>
+
+<header class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Devlog &amp; build board</p>
+    <h1>The Long&nbsp;Dark</h1>
+    <p class="tagline">A roguelike bullet-heaven horror shmup, built in Godot&nbsp;4.7 and headed for Steam.
+      This page is generated from the team's ticket board — it updates when a ticket closes.</p>
+    <p class="stamp" id="stamp"></p>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+
+  <section class="hero-row" aria-labelledby="h-hero">
+    <h2 class="sr-only" id="h-hero">Overall progress</h2>
+    <div class="hero">
+      <p class="hero-label">Tickets complete</p>
+      <p class="hero-figure" id="hero-pct">—</p>
+      <div class="meter" role="img" id="hero-meter" aria-label="Overall completion">
+        <div class="meter-fill" id="hero-fill"></div>
+      </div>
+      <p class="hero-sub" id="hero-sub"></p>
+    </div>
+    <div class="tiles" id="tiles"></div>
+  </section>
+
+  <section class="panel inbox-panel" id="inbox" aria-labelledby="h-inbox">
+    <div class="panel-head">
+      <h2 id="h-inbox">Waiting on you <span class="badge" id="inbox-count">0</span></h2>
+      <p class="panel-sub">Steps an agent has finished that need a human to look, play, or plug something in.
+        Each note is written by the agent that finished the work.</p>
+    </div>
+    <div id="inbox-list"></div>
+  </section>
+
+  <section class="panel" aria-labelledby="h-stream">
+    <div class="panel-head">
+      <h2 id="h-stream">Progress by stream</h2>
+      <p class="panel-sub">Every ticket belongs to one of four workstreams. Segments are counts, not estimates.</p>
+    </div>
+    <div id="chart-stream" class="chart"></div>
+    <div class="legend" id="legend-status"></div>
+  </section>
+
+  <section class="panel" aria-labelledby="h-burnup">
+    <div class="panel-head">
+      <h2 id="h-burnup">Burn-up</h2>
+      <p class="panel-sub">Closed tickets against total scope. The scope line moves when work is added, so a flat gap means new work is arriving as fast as it ships.</p>
+    </div>
+    <div id="chart-burnup" class="chart"></div>
+    <div class="legend" id="legend-burnup"></div>
+  </section>
+
+  <section class="panel" aria-labelledby="h-owner">
+    <div class="panel-head">
+      <h2 id="h-owner">Work by owner</h2>
+      <p class="panel-sub">Two agents build; some tickets can only be closed by a human playing the game.</p>
+    </div>
+    <div id="chart-owner" class="chart"></div>
+    <div class="legend" id="legend-status-2"></div>
+  </section>
+
+  <section class="panel" id="board" aria-labelledby="h-board">
+    <div class="panel-head">
+      <h2 id="h-board">The board</h2>
+      <p class="panel-sub">Every ticket, current state. This is the table view for the charts above.</p>
+    </div>
+    <div class="filters" id="filters" role="group" aria-label="Filter tickets by stream"></div>
+    <div id="table" class="table-wrap"></div>
+  </section>
+
+  <section class="panel" aria-labelledby="h-devlog">
+    <div class="panel-head">
+      <h2 id="h-devlog">Devlog</h2>
+      <p class="panel-sub">One entry per ticket that lands.</p>
+    </div>
+    <div id="devlog"></div>
+  </section>
+
+</main>
+
+<footer class="page-foot">
+  <div class="wrap">
+    <p>Built by Hiceron with two AI collaborators. Source and design notes are kept in a private repository;
+       this page publishes ticket titles, states and dates only.</p>
+    <p class="muted" id="foot-stamp"></p>
+  </div>
+</footer>
+
+<div class="tooltip" id="tooltip" role="status" aria-live="polite"></div>
+<script src="assets/app.js"></script>
+</body>
+</html>

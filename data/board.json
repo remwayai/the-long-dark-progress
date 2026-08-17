@@ -1,0 +1,393 @@
+{
+  "generated": "2026-08-17T10:51:42.032Z",
+  "counts": {
+    "total": 27,
+    "done": 1,
+    "in_progress": 3,
+    "todo": 23,
+    "human": 5,
+    "free": 4,
+    "inbox": 4
+  },
+  "streams": [
+    {
+      "key": "visual",
+      "label": "Visual",
+      "total": 7,
+      "done": 0,
+      "in_progress": 1,
+      "todo": 6
+    },
+    {
+      "key": "gameplay",
+      "label": "Gameplay",
+      "total": 8,
+      "done": 0,
+      "in_progress": 0,
+      "todo": 8
+    },
+    {
+      "key": "pipeline",
+      "label": "Art pipeline",
+      "total": 8,
+      "done": 0,
+      "in_progress": 1,
+      "todo": 7
+    },
+    {
+      "key": "infra",
+      "label": "Infrastructure",
+      "total": 4,
+      "done": 1,
+      "in_progress": 1,
+      "todo": 2
+    }
+  ],
+  "owners": [
+    {
+      "key": "opus",
+      "label": "Opus",
+      "total": 9,
+      "done": 0,
+      "in_progress": 2,
+      "todo": 7
+    },
+    {
+      "key": "grok",
+      "label": "Grok",
+      "total": 13,
+      "done": 1,
+      "in_progress": 1,
+      "todo": 11
+    },
+    {
+      "key": "human",
+      "label": "Hiceron",
+      "total": 5,
+      "done": 0,
+      "in_progress": 0,
+      "todo": 5
+    }
+  ],
+  "burnup": [
+    {
+      "date": "2026-08-17",
+      "total": 27,
+      "closed": 1
+    }
+  ],
+  "inbox": [
+    {
+      "number": 26,
+      "title": "Feel gate - D-026: delete either Laser or Photon after a play session",
+      "stream": "gameplay",
+      "ask": "Play a run using Laser, then a run using Photon. They overlap heavily and one of them should be deleted so the other can get better. Question: which one do you want to keep?",
+      "from": "remwayai",
+      "at": "2026-08-17T10:51:07Z"
+    },
+    {
+      "number": 25,
+      "title": "Feel gate - is bullethazard dimmed 31% acceptable?",
+      "stream": "visual",
+      "ask": "During a run, watch the hazard bullets specifically. They are currently dimmed 31 percent so they stop competing with your own fire. Question: can you still read them as a threat in a busy screen? Answer with yes / no / needs more contrast.",
+      "from": "remwayai",
+      "at": "2026-08-17T10:51:06Z"
+    },
+    {
+      "number": 24,
+      "title": "Feel gate - is CanvasModulate 0.58 the right darkness?",
+      "stream": "visual",
+      "ask": "Launch the game and play one full run. Question: does the overall darkness read as atmosphere, or does it just make things hard to see? Answer with darker / keep / lighter.",
+      "from": "remwayai",
+      "at": "2026-08-17T10:51:05Z"
+    },
+    {
+      "number": 21,
+      "title": "INF-2 - Plug in the Spark's wired NIC (turns a 50-min swap into under 10)",
+      "stream": "infra",
+      "ask": "Plug an ethernet cable from your router or switch into the Spark's RJ45 port, then tell us here. It turns the 196 GB H3 swap from ~50 minutes into under 10, which is what makes freeing that space actually safe. Nothing breaks if you leave it - the archive on the NAS is already verified.",
+      "from": "remwayai",
+      "at": "2026-08-17T10:51:03Z"
+    }
+  ],
+  "devlog": [
+    {
+      "number": 20,
+      "title": "INF-1 - Archive H3 to the NAS and build the H3 &lt;- TRELLIS swap script",
+      "date": "2026-08-17T10:33:23Z",
+      "note": "Closed by Grok. Stream: Infrastructure."
+    }
+  ],
+  "tickets": [
+    {
+      "number": 27,
+      "title": "3D-3 - Krea2 to TRELLIS to Godot bake pipeline (Moloch art first)",
+      "stream": "pipeline",
+      "status": "todo",
+      "created": "2026-08-17T10:50:33Z",
+      "updated": "2026-08-17T10:50:33Z",
+      "closed": null,
+      "owner": "grok"
+    },
+    {
+      "number": 26,
+      "title": "Feel gate - D-026: delete either Laser or Photon after a play session",
+      "stream": "gameplay",
+      "status": "todo",
+      "created": "2026-08-17T09:50:08Z",
+      "updated": "2026-08-17T10:51:07Z",
+      "closed": null,
+      "owner": "human"
+    },
+    {
+      "number": 25,
+      "title": "Feel gate - is bullethazard dimmed 31% acceptable?",
+      "stream": "visual",
+      "status": "todo",
+      "created": "2026-08-17T09:50:03Z",
+      "updated": "2026-08-17T10:51:06Z",
+      "closed": null,
+      "owner": "human"
+    },
+    {
+      "number": 24,
+      "title": "Feel gate - is CanvasModulate 0.58 the right darkness?",
+      "stream": "visual",
+      "status": "todo",
+      "created": "2026-08-17T09:49:59Z",
+      "updated": "2026-08-17T10:51:05Z",
+      "closed": null,
+      "owner": "human"
+    },
+    {
+      "number": 23,
+      "title": "INF-4 - Progress website (GitHub Pages) with graphs and a blog per closed ticket",
+      "stream": "infra",
+      "status": "in_progress",
+      "created": "2026-08-17T09:49:54Z",
+      "updated": "2026-08-17T10:50:49Z",
+      "closed": null,
+      "owner": "opus"
+    },
+    {
+      "number": 22,
+      "title": "INF-3 - Optional: NFS share on UGOS so no password file is needed",
+      "stream": "infra",
+      "status": "todo",
+      "created": "2026-08-17T09:49:49Z",
+      "updated": "2026-08-17T09:49:49Z",
+      "closed": null,
+      "owner": "human"
+    },
+    {
+      "number": 21,
+      "title": "INF-2 - Plug in the Spark's wired NIC (turns a 50-min swap into under 10)",
+      "stream": "infra",
+      "status": "todo",
+      "created": "2026-08-17T09:49:44Z",
+      "updated": "2026-08-17T10:51:03Z",
+      "closed": null,
+      "owner": "human"
+    },
+    {
+      "number": 20,
+      "title": "INF-1 - Archive H3 to the NAS and build the H3 &lt;- TRELLIS swap script",
+      "stream": "infra",
+      "status": "done",
+      "created": "2026-08-17T09:49:40Z",
+      "updated": "2026-08-17T10:33:23Z",
+      "closed": "2026-08-17T10:33:23Z",
+      "owner": "grok"
+    },
+    {
+      "number": 19,
+      "title": "N1 - Act-tinted cosmos so space is not only black",
+      "stream": "visual",
+      "status": "todo",
+      "created": "2026-08-17T09:49:35Z",
+      "updated": "2026-08-17T09:49:35Z",
+      "closed": null,
+      "owner": "grok"
+    },
+    {
+      "number": 18,
+      "title": "12.1 - The Devourer (B-06), the best unbuilt boss",
+      "stream": "gameplay",
+      "status": "todo",
+      "created": "2026-08-17T09:49:28Z",
+      "updated": "2026-08-17T09:49:28Z",
+      "closed": null,
+      "owner": "grok"
+    },
+    {
+      "number": 17,
+      "title": "G6 - CarrierSystem is never instanced in the slice",
+      "stream": "gameplay",
+      "status": "todo",
+      "created": "2026-08-17T09:49:23Z",
+      "updated": "2026-08-17T09:49:23Z",
+      "closed": null,
+      "owner": "grok"
+    },
+    {
+      "number": 16,
+      "title": "G5 - Mission archetypes: Convoy has no ships, Bastion Signal auto-wins in 8s",
+      "stream": "gameplay",
+      "status": "todo",
+      "created": "2026-08-17T09:49:18Z",
+      "updated": "2026-08-17T09:49:18Z",
+      "closed": null,
+      "owner": "grok"
+    },
+    {
+      "number": 15,
+      "title": "G4 - Hull identities: 10 hulls are cells without behaviour",
+      "stream": "gameplay",
+      "status": "todo",
+      "created": "2026-08-17T09:49:13Z",
+      "updated": "2026-08-17T09:49:13Z",
+      "closed": null,
+      "owner": "grok"
+    },
+    {
+      "number": 14,
+      "title": "G3 - Fracture mods and enemyhpmult reach combat",
+      "stream": "gameplay",
+      "status": "todo",
+      "created": "2026-08-17T09:49:09Z",
+      "updated": "2026-08-17T09:49:09Z",
+      "closed": null,
+      "owner": "grok"
+    },
+    {
+      "number": 13,
+      "title": "G2 - Field Fabricator mutates the ship instead of only spending scrap",
+      "stream": "gameplay",
+      "status": "todo",
+      "created": "2026-08-17T09:49:04Z",
+      "updated": "2026-08-17T09:49:04Z",
+      "closed": null,
+      "owner": "grok"
+    },
+    {
+      "number": 12,
+      "title": "G1 - Fusion actually applies to the ship",
+      "stream": "gameplay",
+      "status": "todo",
+      "created": "2026-08-17T09:48:58Z",
+      "updated": "2026-08-17T09:48:58Z",
+      "closed": null,
+      "owner": "grok"
+    },
+    {
+      "number": 11,
+      "title": "3D-2 - TRELLIS.2-4B local install on the Spark",
+      "stream": "pipeline",
+      "status": "in_progress",
+      "created": "2026-08-17T09:48:53Z",
+      "updated": "2026-08-17T10:50:51Z",
+      "closed": null,
+      "owner": "grok"
+    },
+    {
+      "number": 10,
+      "title": "3D-1 - Free HF Space A/B: 4 modules, true baked normals vs procedural",
+      "stream": "pipeline",
+      "status": "todo",
+      "created": "2026-08-17T09:48:49Z",
+      "updated": "2026-08-17T09:48:49Z",
+      "closed": null,
+      "owner": "opus"
+    },
+    {
+      "number": 9,
+      "title": "7.7-E - Gate: no plate pixel within 30 degrees of the reserved hostile hue",
+      "stream": "pipeline",
+      "status": "todo",
+      "created": "2026-08-17T09:48:43Z",
+      "updated": "2026-08-17T09:48:43Z",
+      "closed": null,
+      "owner": "opus"
+    },
+    {
+      "number": 8,
+      "title": "7.7-D - Gate: plate albedo must stay under linear 1.0",
+      "stream": "pipeline",
+      "status": "todo",
+      "created": "2026-08-17T09:48:39Z",
+      "updated": "2026-08-17T09:48:39Z",
+      "closed": null,
+      "owner": "opus"
+    },
+    {
+      "number": 7,
+      "title": "7.7-C - Gate: silhouette IoU = 0.92 or the asset is rejected",
+      "stream": "pipeline",
+      "status": "todo",
+      "created": "2026-08-17T09:48:34Z",
+      "updated": "2026-08-17T09:48:34Z",
+      "closed": null,
+      "owner": "opus"
+    },
+    {
+      "number": 6,
+      "title": "7.7-B - Krea-2 img2img driver: silhouette in, shaded plate out",
+      "stream": "pipeline",
+      "status": "todo",
+      "created": "2026-08-17T09:48:30Z",
+      "updated": "2026-08-17T09:48:30Z",
+      "closed": null,
+      "owner": "opus"
+    },
+    {
+      "number": 5,
+      "title": "7.7-A - Godot orthographic plate baker (GLB to Godot map set)",
+      "stream": "pipeline",
+      "status": "todo",
+      "created": "2026-08-17T09:48:26Z",
+      "updated": "2026-08-17T09:48:26Z",
+      "closed": null,
+      "owner": "opus"
+    },
+    {
+      "number": 4,
+      "title": "V4 - Wire art plates into ModuleVisual with a procedural fallback",
+      "stream": "visual",
+      "status": "todo",
+      "created": "2026-08-17T09:48:22Z",
+      "updated": "2026-08-17T09:48:22Z",
+      "closed": null,
+      "owner": "opus"
+    },
+    {
+      "number": 3,
+      "title": "V2 - GPUParticles2D: engine wash, muzzle flash, debris",
+      "stream": "visual",
+      "status": "todo",
+      "created": "2026-08-17T09:48:17Z",
+      "updated": "2026-08-17T09:48:17Z",
+      "closed": null,
+      "owner": "grok"
+    },
+    {
+      "number": 2,
+      "title": "V1 - Ship a real font and clean the HUD chrome",
+      "stream": "visual",
+      "status": "todo",
+      "created": "2026-08-17T09:48:13Z",
+      "updated": "2026-08-17T09:48:13Z",
+      "closed": null,
+      "owner": "grok"
+    },
+    {
+      "number": 1,
+      "title": "V3 - Procedural d-gradient normals in the module shader",
+      "stream": "visual",
+      "status": "in_progress",
+      "created": "2026-08-17T09:48:08Z",
+      "updated": "2026-08-17T10:50:54Z",
+      "closed": null,
+      "owner": "opus"
+    }
+  ]
+}
