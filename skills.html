@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Long Dark — agent skills</title>
+<meta name="description" content="How the local model and cloud agents work on The Long Dark. Titles only — full skills live in the private repo.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#skills">Skip to the skill list</a>
+
+<header class="page-head">
+  <div class="wrap">
+    <p class="eyebrow"><a href="./">Build board</a> · Agent skills</p>
+    <h1>How the agents work</h1>
+    <p class="tagline">Every tool we use gets a skill so the local 27B (Rem) can load it.
+      Full instructions live in the private game repo under <code>docs/skill/</code>.
+      This page lists titles and one-line purposes only.</p>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+  <section class="panel" id="skills" aria-labelledby="h-skills">
+    <div class="panel-head">
+      <h2 id="h-skills">Skill catalog</h2>
+      <p class="panel-sub">Hermes loads copies from <code>C:\Users\Hicer\skills\</code>.
+        The repo copy is the source of truth. If an agent uses a new tool, it adds a skill in the same PR.</p>
+    </div>
+    <div id="skill-list" class="skill-list"></div>
+  </section>
+</main>
+
+<footer class="page-foot">
+  <div class="wrap">
+    <p><a href="./">← Back to the board</a></p>
+    <p class="muted">No ticket bodies or internal audit notes are published here.</p>
+  </div>
+</footer>
+
+<script>
+fetch('data/skills.json')
+  .then((r) => r.json())
+  .then((data) => {
+    const root = document.getElementById('skill-list');
+    root.innerHTML = '';
+    for (const s of data.skills) {
+      const art = document.createElement('article');
+      art.className = 'skill-card';
+      art.innerHTML = `<h3>${s.title}</h3><p class="skill-who">${s.who}</p><p>${s.summary}</p>`;
+      root.appendChild(art);
+    }
+  })
+  .catch(() => {
+    document.getElementById('skill-list').innerHTML =
+      '<p class="empty">Skill catalog failed to load.</p>';
+  });
+</script>
+</body>
+</html>

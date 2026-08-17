@@ -1,0 +1,36 @@
+{
+  "generated": "2026-08-17T11:20:00Z",
+  "source": "docs/skill/ in the private game repo",
+  "skills": [
+    {
+      "id": "long-dark-agent-loop",
+      "title": "Agent loop",
+      "who": "every agent",
+      "summary": "One GitHub Issue, one branch, verify, close. Chat is not the ticket."
+    },
+    {
+      "id": "long-dark-godot-dev",
+      "title": "Godot 4.7 build loop",
+      "who": "Rem, Grok, Opus",
+      "summary": "GDScript-only stack, GUT tests, data-driven modules, honest COMPLETE / PARTIAL / BLOCKED."
+    },
+    {
+      "id": "long-dark-spark-jobs",
+      "title": "Spark jobs (background)",
+      "who": "Grok, Rem",
+      "summary": "SSH + tmux only. Laptop .bat launchers stay for humans — they flash a cmd window."
+    },
+    {
+      "id": "long-dark-krea2-trellis",
+      "title": "Krea2 → TRELLIS → bake",
+      "who": "Grok",
+      "summary": "Concept plate, then 3D, then 2D combat maps. Modules wait on the free shader first."
+    },
+    {
+      "id": "game-development",
+      "title": "Game-development method",
+      "who": "every agent",
+      "summary": "Phase contracts, feel gates, data-driven content, one choke point per concern."
+    }
+  ]
+}
