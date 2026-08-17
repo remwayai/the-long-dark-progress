@@ -24,6 +24,10 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Job-level so the step `if:` guards below can see it. Without the secret the
+    # site still deploys, it just publishes the last committed data/board.json.
+    env:
+      BOARD_TOKEN: ${{ secrets.BOARD_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
@@ -33,14 +37,10 @@ jobs:
 
       - name: Read the ticket board
         if: env.BOARD_TOKEN != ''
-        env:
-          BOARD_TOKEN: ${{ secrets.BOARD_TOKEN }}
         run: node tools/sync.mjs
 
       - name: Commit refreshed data
         if: env.BOARD_TOKEN != ''
-        env:
-          BOARD_TOKEN: ${{ secrets.BOARD_TOKEN }}
         run: |
           git config user.name  'long-dark-bot'
           git config user.email 'actions@github.com'
